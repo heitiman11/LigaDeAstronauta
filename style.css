@@ -1,0 +1,189 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.font-400 {
+  font-weight: 400;
+}
+
+body {
+  background-image: url("astronauta.jpg");
+  background-color: #ddd;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 100vh;
+  max-width: 100vw;
+}
+
+.container {
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 1rem;
+  backdrop-filter: blur(5.1px);
+  margin-top: 10px;
+  text-align: center;
+}
+
+form {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+h1 {
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
+
+h1:after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: #fbd981;
+  position: absolute;
+}
+
+p {
+  width: 100%;
+  margin: 5px;
+  text-align: start;
+}
+
+label {
+  font-weight: 600;
+}
+
+p input {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+  border: 1px solid #777;
+  border-radius: 5px;
+}
+
+#arquive input {
+  border: none;
+}
+
+.genero {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.genero input {
+  font-weight: 300;
+  width: auto;
+  margin: 15px 0px 0px 0px;
+}
+
+.qualidades {
+  grid-column: 1 / 3;
+  display: flex;
+  align-items: center;
+}
+
+.qualidades div {
+  margin-left: 5px;
+  display: flex;
+}
+
+h2 {
+  margin: 10px 0;
+}
+
+.custom-checkbox input {
+  display: none;
+}
+
+.custom-checkbox input + label:before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  margin-right: 3px;
+  border-radius: 5px;
+  background-color: #fff;
+  display: inline-block;
+}
+
+.custom-checkbox input:checked + label:before {
+  background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_405_2)'%3E%3Crect width='24' height='24' fill='black'/%3E%3Cpath d='M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM10.71 16.29C10.32 16.68 9.69 16.68 9.3 16.29L5.71 12.7C5.32 12.31 5.32 11.68 5.71 11.29C6.1 10.9 6.73 10.9 7.12 11.29L10 14.17L16.88 7.29C17.27 6.9 17.9 6.9 18.29 7.29C18.68 7.68 18.68 8.31 18.29 8.7L10.71 16.29V16.29Z' fill='%23b7b6b4'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_405_2'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+
+textarea {
+  grid-column: 1 / 3;
+  width: 100%;
+  height: 100px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.links {
+  grid-column: 1 / 3;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.links input {
+  width: auto;
+  height: 30;
+  padding: 10px 20px;
+  font-weight: 600;
+  color: #000;
+  background-color: #b7b6b4;
+  border: 1px solid #000;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+a span {
+  margin: 5px;
+}
+
+.options {
+  display: flex;
+}
+
+#detalhe {
+  margin: 0 10px;
+}
+
+@media (max-width: 810px) {
+  .container {
+    margin: 0;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  p {
+    max-width: 600px;
+  }
+
+  label span {
+    display: none;
+  }
+}
+
+@media (max-width: 350px) {
+  .qualidades {
+    display: flex;
+    flex-direction: column;
+  }
+}
